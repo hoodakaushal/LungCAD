@@ -1,0 +1,9 @@
+1. PyQt GUI for user. He uploads stuff, and asks results to be generated.
+2. GUI uses Paramiko to upload the file, and invokes the script to generate results on the server.
+3. On server side, the script:
+    a. Reads the test file, invokes python program to generate it's features.
+    b. Loads the precomputed feature data, matches it with the current one, and sorts them. (C++)
+    c. Takes the top ten matches, and puts them in results folder.
+    Basically, the script ties together a bunch of bash, Python and C++ code.
+4. User selects how many results he wants, and asks them to be downloaded.
+5. GUI uses Paramiko to download the results via sftp.
