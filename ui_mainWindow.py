@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainWindow.ui'
 #
-# Created: Thu Jun  4 14:28:02 2015
+# Created: Thu Jun 11 09:31:00 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -31,6 +31,31 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.label_6 = QtGui.QLabel(self.centralwidget)
+        self.label_6.setObjectName(_fromUtf8("label_6"))
+        self.verticalLayout.addWidget(self.label_6)
+        self.horizontalLayout_4 = QtGui.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+        self.label_5 = QtGui.QLabel(self.centralwidget)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.horizontalLayout_4.addWidget(self.label_5)
+        self.userNameLineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.userNameLineEdit.setObjectName(_fromUtf8("userNameLineEdit"))
+        self.horizontalLayout_4.addWidget(self.userNameLineEdit)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        self.label_4 = QtGui.QLabel(self.centralwidget)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.horizontalLayout_3.addWidget(self.label_4)
+        self.passwordLineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.passwordLineEdit.setEchoMode(QtGui.QLineEdit.Password)
+        self.passwordLineEdit.setObjectName(_fromUtf8("passwordLineEdit"))
+        self.horizontalLayout_3.addWidget(self.passwordLineEdit)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.loginButton = QtGui.QPushButton(self.centralwidget)
+        self.loginButton.setObjectName(_fromUtf8("loginButton"))
+        self.verticalLayout.addWidget(self.loginButton)
         self.label = QtGui.QLabel(self.centralwidget)
         self.label.setObjectName(_fromUtf8("label"))
         self.verticalLayout.addWidget(self.label)
@@ -43,8 +68,6 @@ class Ui_MainWindow(object):
         self.generateResultsButton = QtGui.QPushButton(self.centralwidget)
         self.generateResultsButton.setObjectName(_fromUtf8("generateResultsButton"))
         self.verticalLayout.addWidget(self.generateResultsButton)
-        spacerItem = QtGui.QSpacerItem(20, 152, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.label_2 = QtGui.QLabel(self.centralwidget)
@@ -68,9 +91,12 @@ class Ui_MainWindow(object):
         self.downloadButton = QtGui.QPushButton(self.centralwidget)
         self.downloadButton.setObjectName(_fromUtf8("downloadButton"))
         self.verticalLayout.addWidget(self.downloadButton)
-        spacerItem1 = QtGui.QSpacerItem(20, 153, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem1)
         self.statusLabel = QtGui.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.statusLabel.setFont(font)
         self.statusLabel.setObjectName(_fromUtf8("statusLabel"))
         self.verticalLayout.addWidget(self.statusLabel)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -87,6 +113,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Transfer Files", None))
+        self.label_6.setText(_translate("MainWindow", "Enter Username and Password to login", None))
+        self.label_5.setText(_translate("MainWindow", "Username", None))
+        self.label_4.setText(_translate("MainWindow", "Password", None))
+        self.loginButton.setText(_translate("MainWindow", "Login", None))
         self.label.setText(_translate("MainWindow", "Enter Path of File to Upload", None))
         self.uploadButton.setText(_translate("MainWindow", "Upload!", None))
         self.generateResultsButton.setText(_translate("MainWindow", "Generate Matches", None))

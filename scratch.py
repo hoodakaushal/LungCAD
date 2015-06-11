@@ -1,16 +1,16 @@
-# __author__ = 'hooda'
-#
-# import os
-# import paramiko
-#
-#
-# def getFiles(path):
-#     paths = [os.path.join(path, fn) for fn in next(os.walk(path))[1]]
-#     files = []
-#     for folder in paths:
-#         files += [os.path.join(folder, fn) for fn in next(os.walk(folder))[2]]
-#     files.sort()
-#     return files
+__author__ = 'hooda'
+
+import os
+import paramiko
+
+
+def getFiles(path):
+    paths = [os.path.join(path, fn) for fn in next(os.walk(path))[1]]
+    files = []
+    for folder in paths:
+        files += [os.path.join(folder, fn) for fn in next(os.walk(folder))[2]]
+    files.sort()
+    return files
 #
 # def upoad():
 #     hostAddress = 'ec2-52-25-102-252.us-west-2.compute.amazonaws.com'
@@ -60,3 +60,11 @@
 
 ######################################################################################################################
 
+
+fs = [os.path.join('/home/hooda/Code/SortedData/fp/', f) for f in next(os.walk('/home/hooda/Code/SortedData/fp/'))[2]]
+
+fs.sort()
+
+for i in range(0,500):
+    os.remove(fs[i])
+    print(fs[i])
